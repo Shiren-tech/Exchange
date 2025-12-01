@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class exchange {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        int totalPayment, money, exchange;
+
+        System.out.print("Masukkan total pembayaran: ");
+        totalPayment = input.nextInt();
+
+        System.out.print("Masukkan uang: ");
+        money = input.nextInt();
+
+        exchange = money - totalPayment;
+
+        System.out.println("Kembalian: " + exchange);
+    }
+}
