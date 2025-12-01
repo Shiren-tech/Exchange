@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class versidiskon {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        int totalPayment, money;
+        double discount = 0, finalPayment, exchange;
+
+        System.out.print("Masukkan total pembayaran: ");
+        totalPayment = input.nextInt();
+
+        if (totalPayment > 200000) {
+            discount = 0.20;   // 20%
+        } else if (totalPayment > 50000) {
+            discount = 0.10;   // 10%
+        }
+
+        finalPayment = totalPayment - (totalPayment * discount);
+
+        System.out.println("Total setelah diskon: " + finalPayment);
+
+        System.out.print("Masukkan uang: ");
+        money = input.nextInt();
+
+        exchange = money - finalPayment;
+
+        System.out.println("Kembalian: " + exchange);
+    }
+}
